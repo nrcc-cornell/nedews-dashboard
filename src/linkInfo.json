@@ -1,0 +1,194 @@
+{
+"usdm": {
+    "anchor": "US Drought Monitor",
+    "href": "https://droughtmonitor.unl.edu/",
+    "image": "samples/usdm_sample.jpg",
+    "text": "The U.S. Drought Monitor is a weekly map of drought conditions produced jointly by the National Oceanic and Atmospheric Administration, the U.S. Department of Agriculture, and the National Drought Mitigation Center at the University of Nebraska-Lincoln.  The weekly maps are released at 8:30 a.m. Eastern Standard Time each Thursday and are assessments of past conditions based on data through 7 a.m. Eastern time (8 a.m. Eastern Daylight Time) the preceding Tuesday. The US Drought Monitor web site hosts an assortment of drought-related data and resources."
+},
+"ahps": {
+    "anchor": "NWS AHPS precipitation maps",
+    "href": "https://water.weather.gov/precip/index.php?analysis_date=1518998400&lat=43.9295499729&location_name=nerfc&location_type=rfc&lon=-73.0810549062&precip_layer=0.75&product=percent&recent_type=today&rfc_layer=-1&state_layer=1.0&hsa_layer=-1&county_layer=0.75&time_frame=last7days&time_type=recent&units=eng&zoom=6&domain=current",
+    "image": "samples/ahps_sample.jpg",
+    "text": "National Weather Service Advanced Hydrologic Prediction Service precipitation maps are available for various time periods. Maps are based on a gridded field with a spatial resolution of roughly 4x4 km. Precipitation values are derived using a multisensor approach incorporating radar precipitation estimates, which are bias corrected with ground rainfall gauge reports. In areas with poor radar coverage, satellite precipitation estimates are also used. Maps are updated throughout the day and are usually complete for the entire country by 12:30 ET."
+},
+"nc-ahps": {
+    "anchor": "NC Integrated Water Portal",
+    "href": "https://legacy.climate.ncsu.edu/water/map",
+    "image": "samples/nciwp_sample.png",
+    "text": "[May not be available after June 30, 2021.] AHPS-based maps of SPEI, SPI, SPI Blend, KBDI, and precipitaiton provided by the North Carolina Office. Several time periods from 1-day up to 36-months."
+},
+"hprcc-acis": {
+    "anchor": "HPRCC ACIS maps",
+    "href": "https://hprcc.unl.edu/maps.php?map=ACISClimateMaps",
+    "image": "samples/hprcc-acis_sample.png",
+    "text": "The High Plains Regional Climate Center has an extensive collection of present and past maps of precipitation, temperature and Standardized Precipitation Index based on Applied Climate Information System (ACIS) data. These maps are updated daily."
+},
+"dmmaps": {
+    "anchor": "Drought Monitor Weekly Maps",
+    "href": "https://droughtcenter.unl.edu/USDMWeeklyMaps/US_Maps_current.pdf",
+    "image": "samples/dmmaps_sample.png",
+    "text": "A large, consolidated collection of weekly-updated maps produced for the US Drought Monitor. Many maps have the previous week's USDM depiction superimposed. Sources include: AHPS precipitation, SPI and SPEI; USGS streamflow; NLDAS soil moisture; HPRCC SPI; CPC SPI; VHI; GFS 7-day precipitation and temperature forecasts; KBDI; EDDI; VegDRI; ESI; GRACE-based groundwater and soil moisture; and AIRS-based temperature, RH and vapor pressure deficit."
+},
+"blends": {
+    "anchor": "NDMC Blends",
+    "href": "https://ndmcblends.unl.edu/Home.aspx",
+    "image": "samples/blends_sample.png",
+    "text": "Objective short-term and long-term weekly drought blends."
+},
+"nrcc-kbdi": {
+    "anchor": "NRCC Gridded KBDI",
+    "href": "https://nedews.nrcc.cornell.edu/NRCC_maps/kbdi_nedews_current.png",
+    "image": "samples/nrcc-kbdi_sample.png",
+    "text": "KBDI computed by NRCC using PRISM daily temperature and precipitation and NCEI gridded annual precipitation data."
+},
+"edd": {
+    "anchor": "NWS Enhanced Data Display",
+    "href": "https://preview.weather.gov/edd/?lat=44.1061&lon=-73.6323&zoom=7&ql=FFFFFFFFFFFFFFFFFFFFFFF&ml=Day_1-7_QPF|445|0.8&bm=Blank&lsr=F&lsrp=3&lsra=&mp=F&lfc=T&rt=both&rf=major|moderate|minor|action&ht=threat&pid=N0Q&sf=GOES_Infrared_-_SSEC&ri=5&obs=TFTTFFFFFFTF&is=1&ou=mph&od=-50&ships=F&cluster=T&radO=0.75&satO=0.75&hazO=0.3&tropO=0.7&ndfdO=0.7&ndfdR=Continental_US&ndfdF=Maximum_Temperature_(ºF)&ndfdT=12&ndfdTS=&lviz=T&fullscreen=F&fxt=Point_(Text_Only)&ppd=24&pdy=3&satf=60&obsync=F&flavor=Advanced&tfo=null&tfd=null&tfw=null&ht=F&hd=F&ho=null&hf=null&hb=F&hsps=F&ot=Meteorological_Observation&hvt=F&sht=F&ehm=T&uwl=F&ec=F&lll=F&keys=&ofont=14&opnt=1.2&oset=15&oan=F&oap=1&oid=F&cc=Pub&oo=F&cs=F&rs=P&ofbs=",
+    "image": "samples/edd_sample.jpg",
+    "text": "The National Weather Service Enhanced Data Display is a platform that serves as a gateway to distribute high spatial and temporal resolution data that NWS forecasters generate. It allows users access to these raw data and provides the means to manipulate the data for their needs. EDD provides current and recently observed data, as well as, deterministic and probabilistic forecasts."
+},
+"nyc-resv": {
+    "anchor": "New York City reservoir levels",
+    "href": "https://www.nyc.gov/html/dep/html/drinking_water/maplevels_wide.shtml",
+    "image": "samples/nyc-resv_sample.png",
+    "text": "Map of New York City current reservoir levels provided by New York City Environmental Protection."
+},
+"qdri": {
+    "anchor": "QuickDRI (Quick Drought Response Index)",
+    "href": "https://quickdri.unl.edu/",
+    "image": "samples/qdri_sample.jpg",
+    "text": "The Quick Drought Response Index (QuickDRI) is a drought monitoring tool, which is tailored to detect short-term changes and rapid intensification of drought conditions through the integration of satellite, climate, and biophysical information. QuickDRI is updated on a weekly basis across the continental United States at a 1-km gridded spatial resolution. The primary goal of QuickDRI is to serve as an 'alarm' indicator of rapidly emerging events that are often difficult to detect using other drought indicators."
+},
+"vdri": {
+    "anchor": "VegDRI (Vegetation Drought Response Index)",
+    "href": "https://vegdri.unl.edu/",
+    "image": "samples/vdri_sample.jpg",
+    "text": "The Vegetation Drought Response Index (VegDRI) is a weekly national drought tool. VegDRI maps portray vegetation conditions as plants respond to solar energy, soil moisture, and other limiting factors. The VegDRI data and models that underpin the relatively-detailed VegDRI maps indicate levels of drought stress on vegetation across the conterminous U.S. at a 1 km spatial resolution."
+},
+"eddi": {
+    "anchor": "EDDI (Evaporative Demand Drought Index)",
+    "href": "https://www.esrl.noaa.gov/psd/eddi",
+    "image": "samples/eddi_sample.png",
+    "text": "The Evaporative Demand Drought Index is an experimental drought monitoring and early warning guidance tool. It examines how anomalous the atmospheric evaporative demand is for a given location and across a time period of interest. EDDI is available at 1-week through 12-month timescales. Currently, EDDI is generated daily, but there is a 5-day lag-time."
+},
+"sport": {
+    "anchor": "NASA SPoRT",
+    "href": "https://weather.msfc.nasa.gov/sport/case_studies/lis_NEUS.html",
+    "image": "samples/sport_sample.png",
+    "text": "SPoRT (Short-term Prediction Research and Transition) is a NASA project to transition unique observations and research capabilities to the operational weather community to improve short-term forecasts on a regional scale. Maps, including soil moisture, are regenerated each morning, shortly after midnight."
+},
+"grace": {
+    "anchor": "NASA GRACE",
+    "href": "https://nasagrace.unl.edu",
+    "image": "samples/grace_sample.png",
+    "text": "Groundwater and soil moisture maps based on terrestrial water storage observations derived from NASA's GRACE-FO (Gravity Recovery and Climate Experiment - Follow On) satellite data and integrated with other observations. The maps are updated weekly."
+},
+"nldas": {
+    "anchor": "NLDAS Soil Moisture",
+    "href": "https://www.cpc.ncep.noaa.gov/products/Drought/Monitoring/smp_new.shtml#",
+    "image": "samples/nldas_sample.png",
+    "text": "North-American Land Data Assimilation System (NLDAS) is a product of the National Oceanic and Atmospheric Administration (NOAA) National Centers for Environmental Prediction (NCEP) Environmental Modeling Center (EMC)s. The Climate Prediction Center (CPC) derives the NLDAS experimental drought monitor from near real-time soil moisture output from both the NASA MOSAIC and NCEP Noah land surface models. The anomalies and percentiles are based on a 28 year climatology (1980 - 2007). The maps are updated daily with about a 4-day lag."
+},
+"vic": {
+    "anchor": "VIC Soil Moisture",
+    "href": "http://www.hydro.ucla.edu/SurfaceWaterGroup/forecast/monitor/curr/conus.mexico/main_sm.shtml",
+    "image": "samples/vic_sample.png",
+    "text": "Soil moisture from UCLA VIC model. Maps have 1 to 2-day lag. National and links to regional maps available."
+},
+"usgs-sf": {
+    "anchor": "USGS WaterWatch (streamflow)",
+    "href": "https://waterwatch.usgs.gov/index.php?mt=real&st=ny%2Ch01&usst=ny&ushuc=&id=wwlmap_viewer",
+    "image": "samples/usgs-sf_sample.jpg",
+    "text": "The USGS WaterWatch site displays maps, graphs, and tables describing real-time, recent, and past streamflow conditions for the United States. The real-time information generally is updated on an hourly basis. Maps present streamflow conditions compared to historical streamflow and allow users to retrieve graphs of stream stage (water elevation) and flow. Hydrologic unit code (HUC) maps show average streamflow conditions for 1-, 7-, 14-, and 28-day periods, and for monthly average streamflow. Summary tables are provided along with time-series plots that depict variations in streamflow at a site through time."
+},
+"usgs-gw": {
+    "anchor": "USGS Groundwater",
+    "href": "https://water.usgs.gov/ogw/",
+    "image": "samples/usgs-gw_sample.jpg",
+    "text": "The USGS Groundwater Information Pages are an extensive collection of groundwater data, information and publications. The Groundwater Watch data pages group related wells and data from active well networks, and provide basic statistics about the water-level data collected by USGS water science centers. (At the time of this writing, the Groundwater Watch pages were not accessible via Google Chrome.)"
+},
+"cpc-blends": {
+    "anchor": "CPC objective drought blends",
+    "href": "https://www.cpc.ncep.noaa.gov/products/predictions/tools/edb/droughtblends.php",
+    "image": "samples/cpc-blends_sample.jpg",
+    "text": "Climate division-scale maps of long and short-term blends of drought indicators from the NWS Climate Prediction Center (CPC). Drought blends are produced each Monday and incorporate data through the previous Saturday. In addition to current maps, historical blend maps are available back to 2003."
+},
+"cpc-topsoil": {
+    "anchor": "CPC statewide topsoil moisture",
+    "href": "https://www.cpc.ncep.noaa.gov/products/monitoring_and_data/topsoil.shtml",
+    "image": "samples/cpc-topsoil_sample.jpg",
+    "text": "State maps of percent of state with topsoil moisture short or very short prepared by the NWS Climate Prediction Center (CPC) from USDA subjective reports. Current conditions and comparisons to 5 and 10-year means."
+},
+"cpc-pdsi": {
+    "anchor": "CPC PDSI and CMI",
+    "href": "https://www.cpc.ncep.noaa.gov/products/monitoring_and_data/drought.shtml",
+    "image": "samples/cpc-pdsi_sample.jpg",
+    "text": "The Palmer Drought Severity Index (PDSI) and Crop Moisture Index (CMI) are indices of the relative dryness or wetness affecting water sensitive economies. The data are provided by the NWS Climate Prediction Center (CPC) as maps and tables for the contiguous United States, presented by state and climate division."
+},
+"cpc-sm": {
+    "anchor": "CPC Soil Moisture",
+    "href": "https://www.cpc.ncep.noaa.gov/products/Soilmst_Monitoring/US/Soilmst/Soilmst.shtml#",
+    "image": "samples/cpc-sm_sample.gif",
+    "text": "Climate Prediction Center estimated soil moisture using a one-layer hydrological model. The model takes observed precipitation and temperature and calculates soil moisture, evaporation and runoff. The potential evaporation is estimated from observed temperature."
+},
+"spei": {
+    "anchor": "SPEI Global Drought Monitor",
+    "href": "https://spei.csic.es/map/maps.html#months=1",
+    "image": "samples/spei_sample.jpg",
+    "text": "The Standardized Precipitation-Evapotranspiration Index (SPEI) Global Drought Monitor offers near real-time information about drought conditions at the global scale, with a 0.5 degrees spatial resolution and a monthly time resolution. SPEI time-scales between 1 and 48 months are provided. The dataset is updated during the first days of the following month."
+},
+"nidis": {
+    "anchor": "NIDIS Drought Portal",
+    "href": "https://www.drought.gov/drought/",
+    "image": "samples/nidis_sample.jpg",
+    "text": "The National Integrated Drought Information System US Drought Portal (Drought.gov) provides a wide array of data, maps, tools and other drought resources for the country."
+},
+"dir": {
+    "anchor": "NDMC Drought Impacts Reporter",
+    "href": "https://go.unl.edu/DIRdash",
+    "image": "samples/dir_sample.jpg",
+    "text": "The National Drought Mitigation Center (NDMC) Drought Impact Reporter is a comprehensive database of drought impacts for the country from a variety of sources. Through the Drought Impact Reporter, you can submit reports of drought impacts in your area or view reports submitted by others. Report sources include media, users, CoCoRaHS, National Weather Service and other agencies. "
+},
+"ne-sweq": {
+    "anchor": "New York/New England Snow Survey",
+    "href": "https://www.nrcc.cornell.edu/regional/snowsurvey/snowsurvey.html",
+    "image": "samples/ne_sweq_sample.png",
+    "text": "Maps of snow water equivalent from snow surveys conducted throughout New York and New England, and compiled by NRCC. Updated bi-weekly on Friday beginning in early Janary and continuing to as late as early May."
+},
+"vtanr": {
+    "anchor": "VT Drinking Water Drought Reporter",
+    "href": "https://anrmaps.vermont.gov/websites/droughtreporter/",
+    "image": "samples/vtanr_sample.png",
+    "text": "Vermont Agency of Natural Resources crowd-sourced reports of drinking water shortages in Vermont. "
+},
+"enso": {
+    "anchor": "NOAA ENSO Portal",
+    "href": "https://www.climate.gov/enso",
+    "image": "samples/enso_sample.png",
+    "text": "El Niño and La Niña are the warm and cool phases of a recurring climate pattern across the tropical Pacific—the El Niño-Southern Oscillation, or “ENSO” for short. ENSO phase changes disrupt the large-scale air movements in the tropics, triggering a cascade of global side effects. NOAA’s El Niño and La Niña Portal provides – current status, explanatory links, progression and impacts at the United States and global scale."
+},
+"nrccdu": {
+    "anchor": "NRCC Drought Page",
+    "href": "https://www.nrcc.cornell.edu/regional/drought/drought.html",
+    "image": "samples/nrccdu_sample.png",
+    "text": "The Northeast Regional Climate Center's Drought Page features a weekly drought update (when drought exists anywhere in the Northeast) and links to other resources."
+},
+"cocorahs": {
+    "anchor": "CoCoRaHS",
+    "href": "https://www.cocorahs.org/",
+    "image": "samples/cocorahs_sample.png",
+    "text": "CoCoRaHS is an acronym for the Community Collaborative Rain, Hail and Snow Network.  CoCoRaHS is a unique, non-profit, community-based network of volunteers of all ages and backgrounds working together to measure and map precipitation (rain, hail and snow).   By using low-cost measurement tools, stressing training and education, and utilizing an interactive Web-site, our aim is to provide the highest quality data for natural resource, education and research applications. CoCoRaHS volunteers can also enter drought condition reports."
+},
+"nhdes-gw": {
+    "anchor": "NHDES Groundwater Monitoring",
+    "href": "https://www4.des.state.nh.us/HydroServerMap/Groundwater-Monitoring-Sites.html",
+    "image": "samples/nhdes_sample.png",
+    "text": "Access to groundwater data collected by the New Hampshire Department of Environmental Services and New Hampshire Geelogical Survey from a statewide well monitoring network. This map interface provides the ability create a time series graph for each monitoring site."
+},
+"me-wells": {
+    "anchor": "Maine Dry Well Survey",
+    "href": "https://maine-dry-well-survey-maine.hub.arcgis.com",
+    "image": "samples/mewells_sample.png",
+    "text": "Results of responses to an on-going survey of reports of dry wells by the Maine Emergency Management Agency."
+}
+}

@@ -1,0 +1,329 @@
+div.app {
+	font-family:'Open Sans', sans-serif;
+	max-width:1024px; }
+
+div.banner-container {
+	background-color:#f7f4eb; /* #d5f4c1;*/
+	line-height:87px;
+	border: 1pt solid #6c5626;
+	text-align: center; }
+div.banner-container a:first-of-type {
+	position: absolute;
+	top: 0;
+	left: 0; }
+div.banner-container a:last-of-type {
+	position: absolute;
+	top: 0;
+	right: 0; }
+div.banner-container a img {
+	margin:2px;
+	height: 85px; }	
+div.banner-container h2 {
+	vertical-align: middle;
+	display: inline-block; 
+	line-height: normal;
+	color: #6c5626; }
+div.banner-container h2 span {
+	color: goldenrod; }
+
+div.selectormap-container {
+	text-align: center;
+	align-items: center;
+	margin: 1em 0; }
+button.selectormap-feedback-button {
+	padding: 4px 6px;
+	margin-top: 1em; }
+div.selectormap-map-container {
+	margin: 0 auto;
+	width:300px; }
+.selectormap-map {
+	height:230px;
+	width:300px;
+	border:1pt solid darkblue;}
+span.selectormap-map-caption {
+	font-size: 90%;
+	font-style: italic; }
+	
+img.dmmap-bigimage-border {
+	max-width:91%;
+	margin-top:6px;
+	border: 1pt solid black; } 
+img.dmmap-bigimage {
+	max-width:100%; } 
+
+.marker-map {
+	height:320px; }
+.thumb-marker-map {
+	height:90px; }
+div.thumb-label {
+	font-size:0.6em;
+	padding:0;
+	width:100%;
+	color:white;
+	background-color: #555d2f;
+	line-height:1.2em; 
+	text-align: center; }
+
+table.mapLegend-container {
+	border: 1pt solid gray;
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	text-align: center; }
+table.mapLegend-container td {
+	font-size: 60%;
+	border: 1pt solid gray;
+	padding: 2px;
+	line-height: 1em; }
+.mapLegend-icon {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	border-radius:50%;
+	height:5px;
+	width:5px; }
+.mapLegend-icon-black {
+	background:black;
+	border:1pt solid black; }
+.mapLegend-icon-darkred {
+	background:darkred;
+	border:1pt solid black; }
+.mapLegend-icon-darkorange {
+	background:darkorange;
+	border:1pt solid black; }
+.mapLegend-icon-lime {
+	background:lime;
+	border:1pt solid black; }
+.mapLegend-icon-lightblue {
+	background:cyan;
+	border:1pt solid black; }
+.mapLegend-icon-blue {
+	background:blue;
+	border:1pt solid black; }
+.mapLegend-icon-red {
+	background:red;
+	border:1pt solid black; }
+.mapLegend-icon-goldenrod {
+	background:goldenrod;
+	border:1pt solid black; }
+.mapLegend-icon-yellow {
+	background:yellow;
+	border:1pt solid black; }
+.mapLegend-icon-green {
+	background:green;
+	border:1pt solid black; }
+.mapLegend-icon-dodgerblue {
+	background:dodgerblue;
+	border:1pt solid black; }
+ .mapLegend-icon-indigo {
+	background:indigo;
+	border:1pt solid black; }
+.mapLegend-icon-darkviolet {
+	background:darkviolet;
+	border:1pt solid black; }
+.mapLegend-icon-fuchsia {
+	background:fuchsia;
+	border:1pt solid black; }
+
+.mapLegend-icon-d4 {
+	background:#730000;
+	border:1pt solid black; }
+.mapLegend-icon-d3 {
+	background:#E60000;
+	border:1pt solid black; }
+.mapLegend-icon-d2 {
+	background:#FFAA00;
+	border:1pt solid black; }
+.mapLegend-icon-d1 {
+	background:#FCD37F;
+	border:1pt solid black; }
+.mapLegend-icon-d0 {
+	background:#FFFF00;
+	border:1pt solid black; }
+.mapLegend-icon-dnada {
+	background: gainsboro;
+	border:1pt solid black; }
+.mapLegend-icon-w0 {
+	background:lime;
+	border:1pt solid black; }
+.mapLegend-icon-w1 {
+	background:#BEE8FF;
+	border:1pt solid black; }
+.mapLegend-icon-w2 {
+	background:#00A9E6;
+	border:1pt solid black; }
+.mapLegend-icon-w3 {
+	background:#005CE6;
+	border:1pt solid black; }
+.mapLegend-icon-w4 {
+	background:#0026D7;
+	border:1pt solid black; }
+
+div.streammenu-container {
+	text-align: center; }
+div.streammenu-container button {
+	text-transform: capitalize; }
+.streammenu-menuitem {
+	font-size: small !important;
+	height: 1em !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;}
+
+span.spimap-tagline {
+	font-size: 80%; }
+
+.outlook-map {
+	border:1pt solid gray;
+	height:160px;	/* 230 good for NY,NE; 325 needed for all Northeast */ }
+.outlook-modal-map {
+	border:1pt solid gray;
+	height:320px; }
+.outlook-modal-linkedmap {
+	border: 1pt solid gray;
+	width:100%; }
+img.outlookmap-border {
+	border: 1pt solid gray;
+	width: 99%; }
+
+div.qpfLegend-container table, div.outlookLegend-container table  {
+	font-family: Cabin Condensed, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 6px;
+	text-align: center;
+	table-layout: fixed;
+	border: 1pt solid gray; }
+div.qpfLegend-container thead, div.outlookLegend-container thead  {
+	font-weight:700;
+	font-size:65%;
+	line-height:1em;
+	border-bottom:1pt solid gray;  }
+div.qpfLegend-container tfoot, div.outlookLegend-container tfoot  {
+	font-size:50%;
+	line-height:1em;
+	border-top:1pt solid gray; }
+div.qpfLegend-container tbody td, div.outlookLegend-container tbody td {
+	font-size: 50%;
+	border: 0;
+	padding: 1px;
+	line-height: 1em; }
+div.qpfLegend-container td:last-of-type {
+	border-right: 1pt solid gray; }
+div.outlookLegend-container table  {
+	table-layout: fixed; }
+div.outlookLegend-container tbody tr td.topbotbor {
+	border-top: 1pt solid black;
+	border-bottom: 1pt solid black; }
+div.outlookLegend-container tbody tr td.lrbor {
+	border-left: 1pt solid black;
+	border-right: 1pt solid black; }
+div.outlookLegend-container tbody tr td.lbor {
+	border-left: 1pt solid black; }
+div.outlookLegend-container tbody tr td.rbor {
+	border-right: 1pt solid black; }
+	
+div.hover-content-container {
+	padding: 4px; 
+	border: 1pt solid gray;
+	margin-top: 1em; 
+	overflow: hidden; }
+div.hover-content-container img {
+	width: 40%;
+	float: left;
+	margin-right: 8px;
+	border: 1pt solid gray;
+	margin-bottom: 4px; }
+div.hover-content-container span {
+	font-size: 90%;
+	clear: left; }
+.link-helpicon-container {
+	margin-left: 7px;
+	vertical-align: middle;
+	display: none; }
+			
+.modal-container {
+	background-color: white;
+	padding:8px; }
+.modal-container-image {
+	width: 100%; }
+
+footer {
+	border-top: 1pt solid #6c5626;
+	font-size:80%;
+	color: #6c5626;
+	text-align:center; }
+
+/* ImageGallery styles */
+div.image-gallery {
+	text-align:center; }
+div.image-gallery-image img {
+	width:100%;
+	max-width:500px; }
+a.image-gallery-thumbnail {
+	width:12%; }
+div.image-gallery-thumbnail-inner {
+	margin-bottom:0.7em; }
+div.image-gallery-thumbnail-label {
+   font-size:0.6em;
+   padding:0;
+   top:100%;
+   width:100%;
+   transform: translateY(0);
+   -webkit-transform: translateY(0);
+   color:white;
+   background-color:#555d2f;
+   line-height:1.2em; }
+
+/* React-collapsible styles */
+h4.Collapsible__trigger {
+	margin: 5px 0 5px;
+	background-color: #555d2f;
+	color: white;
+	padding: 3px 12px; }
+h4.Collapsible__trigger::before {
+	content: ' ';
+	width: 0; 
+	height: 0; 
+	display:inline-block;
+	vertical-align: middle;
+	margin-right: 1em; }
+h4.Collapsible__trigger.is-open::before {
+	border-left: 0.4em solid transparent;
+	border-right: 0.4em solid transparent;
+	border-bottom: 0.4em solid currentColor; }
+h4.Collapsible__trigger.is-closed::before {
+	border-left: 0.4em solid transparent;
+	border-right: 0.4em solid transparent;
+	border-top: 0.4em solid currentColor; }
+	
+@media screen and (max-width: 900px){
+	div.banner-container {
+		height:65px; }
+	div.banner-container h2 {
+		font-size: 1.4em;
+		vertical-align: top;
+		margin-top: 10px;
+		width:50%; }
+	div.banner-container a img {
+		height: 60px; }	
+}
+@media screen and (max-width: 600px){
+	/*--- iPhone only CSS here ---*/
+	div.banner-container {
+		height:45px; }
+	div.banner-container h2 {
+		font-size:75%;	
+		vertical-align: top;
+		margin-top: 0.5em;
+		width:40%; }
+	div.banner-container a img {
+		height: 42px; }	
+	img.dmmap-bigimage-border {
+		margin-left:0.5em; }
+	.outlook-modal-map {
+		height:160px; }
+	div.hover-content-container {
+		display:none; }
+	.link-helpicon-container {
+		display: inline-block; }	
+}
