@@ -180,10 +180,16 @@
     "text": "CoCoRaHS is an acronym for the Community Collaborative Rain, Hail and Snow Network.  CoCoRaHS is a unique, non-profit, community-based network of volunteers of all ages and backgrounds working together to measure and map precipitation (rain, hail and snow).   By using low-cost measurement tools, stressing training and education, and utilizing an interactive Web-site, our aim is to provide the highest quality data for natural resource, education and research applications. CoCoRaHS volunteers can also enter drought condition reports."
 },
 "nhdes-gw": {
-    "anchor": "NHDES Groundwater Monitoring",
-    "href": "https://www4.des.state.nh.us/HydroServerMap/Groundwater-Monitoring-Sites.html",
+    "anchor": "NHGS Groundwater Level Monitoring",
+    "href": "https://nhdes.maps.arcgis.com/apps/webappviewer/index.html?id=521022e32a1540c2b281a071aa5421b7",
     "image": "samples/nhdes_sample.png",
-    "text": "Access to groundwater data collected by the New Hampshire Department of Environmental Services and New Hampshire Geelogical Survey from a statewide well monitoring network. This map interface provides the ability create a time series graph for each monitoring site."
+    "text": "This WebMap displays the status of the most recent groundwater level measurements relative to the period of record monthly statistics calculated for the 30 groundwater wells monitored by NHGS, as well as the 3 USGS-monitored wells located in NH. Figures showing a 12-Month hydrographs with site statistics and a 24-month plots of groundwater measurements are available by selecting a site."
+},
+"negs_gw": {
+    "anchor": "Groundwater Levels in New England",
+    "href": "https://newengland.water.usgs.gov/web_app/GWW/GWW.html",
+    "image": "samples/negs_sample.png",
+    "text": "Map displaying wells that are part of the National Groundwater Monitoring Network which includes wells not measured by USGS, for example in New Hampshire and Vermont. You can also turn on and off continuous and periodically measurement wells (measured generally 1 time per month)."
 },
 "me-wells": {
     "anchor": "Maine Dry Well Survey",

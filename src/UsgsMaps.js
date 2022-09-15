@@ -84,9 +84,11 @@ export default class UsgsMaps extends Component {
         results.data.forEach(f => {
 //        const href1 = "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=" + f.siteid + "&parm_cd=72019&period=60"
           const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P60D"
-          const href2 = "https://groundwaterwatch.usgs.gov/BandPlots-small/" + f.state + "/sm_" + f.siteid + ".png"
-          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1, href2]})
-        })
+//          removed href2 pending replacement
+//          const href2 = "https://groundwaterwatch.usgs.gov/BandPlots-small/" + f.state + "/sm_" + f.siteid + ".png"
+//          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1, href2]})
+          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1]})
+})
         this.setState({gwmarkers: markers})
       })
       .catch(err => {
@@ -149,17 +151,25 @@ export default class UsgsMaps extends Component {
             <StreamMenu streamflows={this.smitems} handleStreamMenuChange={this.handleStreamMenuChange} />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <MarkerMaps 
-              markers={this.state.gwmarkers} 
-              usdmOverlay={this.state.showdm} 
-              selectedState={this.props.selectedState} 
-              mapType="groundwater" 
-              mapDate={this.state.downloadDates ? this.state.downloadDates.wells : ""} 
-              mapTitle={this.wellstitle}
-            />
+
+            <div style={{display:"table",height:"100%",width:"100%",textAlign:"center"}}>
+              <a href="https://newengland.water.usgs.gov/web_app/GWW/GWW.html" style={{display:"table-cell", verticalAlign:"middle"}} target="_blank">View Groundwater Levels in New England<br/>(opens in a new tab)</a>
+            </div>
+
           </Grid>
         </Grid>
       </Collapsible>
     )
   }
 }
+
+//
+//<MarkerMaps 
+//markers={this.state.gwmarkers} 
+//usdmOverlay={this.state.showdm} 
+//selectedState={this.props.selectedState} 
+//mapType="groundwater" 
+//mapDate={this.state.downloadDates ? this.state.downloadDates.wells : ""} 
+//mapTitle={this.wellstitle}
+///>
+//

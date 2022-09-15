@@ -78,7 +78,7 @@ export default class NrccSpiMaps extends Component {
 
   render() {
     return (
-      <Collapsible trigger="NEW NRCC SPI Maps" triggerTagName="h4" open={false} transitionTime={200}>
+      <Collapsible trigger="NRCC SPI Maps" triggerTagName="h4" open={false} transitionTime={200}>
         <FormControlLabel
           control={
             <Switch

@@ -10,6 +10,7 @@ import UsgsMaps from './UsgsMaps'
 import EddiMaps from './EddiMaps'
 import NwmMaps from './NwmMaps'
 import NrccSpiMaps from './NrccSpiMaps'
+import KbdiMap from './KbdiMap'
 //import SpiMaps from './SpiMaps'
 
 export default class App extends Component {
@@ -46,6 +47,7 @@ export default class App extends Component {
         <NrccSpiMaps  selectedState={this.state.selectedState} />
         <HprccSpiMaps selectedState={this.state.selectedState} maptype={"SPI"} />
         <HprccSpiMaps selectedState={this.state.selectedState} maptype={"SPEI"} />
+        <KbdiMap      selectedState={this.state.selectedState} />
         <NwmMaps      selectedState={this.state.selectedState} maptype={"sm"} mapnames={this.nwmSmMaps} />
         <NwmMaps      selectedState={this.state.selectedState} maptype={"sf"} mapnames={this.nwmSfMaps} />
         <EddiMaps />
