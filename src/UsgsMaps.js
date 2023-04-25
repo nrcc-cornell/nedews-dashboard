@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Collapsible from 'react-collapsible'
 import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
+//import ButtonGroup from '@material-ui/core/ButtonGroup'
 import MarkerMaps from './MarkerMaps'
 import StreamMenu from './StreamMenu'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
@@ -13,10 +15,12 @@ export default class UsgsMaps extends Component {
     this.state = {
       flowindex: 1,
       flowdate: null,
+      wellsdate: null,
       sfmarkers: [],
       gwmarkers: [],
-      downloadDates: {},
-      showdm: true
+      showdm: true,
+      cagtype: 'usdm',
+      cagmarkers: {}
     }
     this.streamflows = [
       {
@@ -38,7 +42,6 @@ export default class UsgsMaps extends Component {
     ]
     this.wellsfile = "./data/wells.json"
     this.wellstitle = "Groundwater Status"
-    this.datesfile = "./data/download_dates.json"
     this.smitems = this.streamflows.map((i) => {return i.title})
   }
 
@@ -57,11 +60,11 @@ export default class UsgsMaps extends Component {
     let markers = []
     axios.get(flowfile)
       .then(results => {
-        results.data.forEach(f => {
+        results.data.data.forEach(f => {
           const href = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=00065&period=P30D"
           markers.push({position:f.position, fillColor:sfCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href]})
         })
-        this.setState({sfmarkers: markers, flowdate: this.state.downloadDates[flowfile.replace("./data/","").replace(".json","")]})
+        this.setState({sfmarkers: markers, flowdate: results.data.date})
       })
       .catch(err => {
         console.log("Streamflow Request Error: " + err)
@@ -69,7 +72,7 @@ export default class UsgsMaps extends Component {
   }
  
   getGwMarkers = (wellsfile) => {
-    const gwCategoryColors = [
+    const usgsCategoryColors = [
       'red',
       'darkred',
       'darkorange',
@@ -78,37 +81,40 @@ export default class UsgsMaps extends Component {
       'blue',
       'black'
     ]
-    let markers = []
+    const usdmCategoryColors = [
+      "#730000",
+      "#E60000",
+      "#FFAA00",
+      "#FCD37F",
+      "#FFFF00",
+      "gainsboro",
+      "lime",
+      "#BEE8FF",
+      "#00A9E6",
+      "#005CE6",
+      "#0026D7",
+    ]
+    let usdmmarkers = []
+    let usgsmarkers = []
     axios.get(wellsfile)
       .then(results => {
-        results.data.forEach(f => {
-//        const href1 = "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=" + f.siteid + "&parm_cd=72019&period=60"
-          const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P60D"
+        results.data.data.forEach(f => {
+          const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P365D"
 //          removed href2 pending replacement
 //          const href2 = "https://groundwaterwatch.usgs.gov/BandPlots-small/" + f.state + "/sm_" + f.siteid + ".png"
 //          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1, href2]})
-          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1]})
-})
-        this.setState({gwmarkers: markers})
+          usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement date: "+f.mdate, href1]})
+          usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement date: "+f.mdate, href1]})
+        })
+        this.setState({cagmarkers: {usgs:usgsmarkers, usdm:usdmmarkers}})
+        this.setState({gwmarkers: this.state.cagtype === 'usdm' ? usdmmarkers : usgsmarkers, wellsdate: results.data.date})
       })
       .catch(err => {
         console.log("Groundwater Request Error: " + err);
       })
   }
-
-  getDownloadDates = (datesfile) => {
-    axios.get(datesfile)
-      .then(results => {
-        this.setState({downloadDates: results.data})
-        this.setState({flowdate: results.data.flow7d})
-      })
-      .catch(err => {
-        console.log("Download Dates Request Error: " + err);
-      })
-  }
  
   componentDidMount = () => {
-    this.getDownloadDates(this.datesfile)
     this.getSfMarkers(this.streamflows[this.state.flowindex].file)
     this.getGwMarkers(this.wellsfile)
   }
@@ -121,55 +127,81 @@ export default class UsgsMaps extends Component {
   handleSwitchChange = name => event => {
     this.setState({ [name]: event.target.checked })
   }
-    
+
+  handleToggleChange = (event) => {
+    const newcagtype = event.currentTarget.value
+    this.setState({cagtype: newcagtype, gwmarkers: this.state.cagmarkers[newcagtype]})
+  }
+
   render() {
     return (
-      <Collapsible trigger="USGS Streamflow and Groundwater" triggerTagName="h4" open={true} transitionTime={200}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={this.state.showdm}
-              onChange={this.handleSwitchChange('showdm')}
-              value="showdm"
-              color="primary"
-              style={{height:"1.5em"}}
-            />
-          }
-          label="Show USDM"
-        />    
+      <div>
+        <Collapsible trigger="USGS Streamflow and Groundwater" triggerTagName="h4" open={true} transitionTime={200}>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={this.state.showdm}
+                onChange={this.handleSwitchChange('showdm')}
+                value="showdm"
+                color="primary"
+                style={{height:"1.5em"}}
+              />
+            }
+            label="Show USDM"
+          />    
 
-        <Grid container spacing={8} justify="center">
-          <Grid item xs={12} sm={6}>
-            <MarkerMaps 
-              markers={this.state.sfmarkers} 
-              usdmOverlay={this.state.showdm} 
-              selectedState={this.props.selectedState} 
-              mapType="streamflow" 
-              mapDate={this.state.flowdate ? this.state.flowdate : ""}
-              mapTitle={this.streamflows[this.state.flowindex].title+" Streamflow"}
-            />
-            <StreamMenu streamflows={this.smitems} handleStreamMenuChange={this.handleStreamMenuChange} />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid container spacing={8} justify="center">
+            <Grid item xs={12} sm={6}>
+              <MarkerMaps 
+                markers={this.state.sfmarkers} 
+                usdmOverlay={this.state.showdm} 
+                selectedState={this.props.selectedState} 
+                mapType="streamflow" 
+                mapDate={this.state.flowdate ? this.state.flowdate : ""}
+                mapTitle={this.streamflows[this.state.flowindex].title+" Streamflow"}
+                cagType={this.state.cagtype}
+              />
+              <StreamMenu streamflows={this.smitems} handleStreamMenuChange={this.handleStreamMenuChange} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <MarkerMaps 
+                markers={this.state.gwmarkers} 
+                usdmOverlay={this.state.showdm} 
+                selectedState={this.props.selectedState} 
+                mapType="groundwater" 
+                mapDate={this.state.wellsdate ? this.state.wellsdate : ""}
+                mapTitle={this.wellstitle}
+                cagType={this.state.cagtype}
+              />
+              <div className="gwbutton-container">
+                <span>Percentile classes:</span>
+                <Button 
+                  className={this.state.cagtype === 'usdm' ? "gwbutton-select" : "gw-button-unselect"}
+                  size="small"
+                  value="usdm" 
+                  onClick={this.handleToggleChange}
+                >
+                  USDM
+                </Button>
+                <Button 
+                  className={this.state.cagtype === 'usgs' ? "gwbutton-select" : "gw-button-unselect"}
+                  size="small"
+                  value="usgs" 
+                  onClick={this.handleToggleChange}
+                >
+                  USGS
+                </Button>
+              </div>
+            </Grid>
+           </Grid>
+        </Collapsible>
 
-            <div style={{display:"table",height:"100%",width:"100%",textAlign:"center"}}>
-              <a href="https://newengland.water.usgs.gov/web_app/GWW/GWW.html" style={{display:"table-cell", verticalAlign:"middle"}} target="_blank">View Groundwater Levels in New England<br/>(opens in a new tab)</a>
-            </div>
-
-          </Grid>
-        </Grid>
-      </Collapsible>
+      </div>
     )
   }
 }
 
-//
-//<MarkerMaps 
-//markers={this.state.gwmarkers} 
-//usdmOverlay={this.state.showdm} 
-//selectedState={this.props.selectedState} 
-//mapType="groundwater" 
-//mapDate={this.state.downloadDates ? this.state.downloadDates.wells : ""} 
-//mapTitle={this.wellstitle}
-///>
-//
+
+//<div style={{display:"table",height:"100%",width:"100%",textAlign:"center"}}>
+//<a href="https://newengland.water.usgs.gov/web_app/GWW/GWW.html" style={{display:"table-cell", verticalAlign:"middle"}} target="_blank">View Groundwater Levels in New England<br/>(opens in a new tab)</a>
+//</div>

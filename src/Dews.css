@@ -159,6 +159,21 @@ table.mapLegend-container td {
 	background:#0026D7;
 	border:1pt solid black; }
 
+div.gwbutton-container {
+	text-align:center;
+}
+div.gwbutton-container span {
+	font-size: 0.85rem;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	margin-right: 0.5em;
+}
+div.gwbutton-container button.gwbutton-select {
+	border: 1px solid black;
+}
+div.gwbutton-container button.gwbutton-unselect {
+	border: 1px solid lightgray;
+}
+
 div.streammenu-container {
 	text-align: center; }
 div.streammenu-container button {
@@ -240,10 +255,19 @@ div.hover-content-container span {
 	margin-left: 7px;
 	vertical-align: middle;
 	display: none; }
-			
+
+.modal-container-container {
+	display: flex;
+	align-items: center;
+	text-align: right;
+	margin: auto 10%;
+}
 .modal-container {
 	background-color: white;
 	padding:8px; }
+.modal-container-container .modal-container h2, .modal-container-container .modal-container p {
+	text-align: left;
+}
 .modal-container-image {
 	width: 100%; }
 

@@ -89,16 +89,16 @@ export default class NwmMaps extends Component {
         <Modal 
           open={this.state.showModal}
           onClose={this.handleCloseModal} 
-          style={{display:'flex', alignItems:'center', textAlign:'right', margin:'auto 10%'}}
+          className="modal-container-container"
         >
           <div className="modal-container">
             <Tooltip title="Close">
               <Cancel onClick={this.handleCloseModal} />
             </Tooltip>
-            <h2 style={{textAlign:"left"}}>{this.mapopts[this.props.maptype].modalinfo.title}</h2>
-            <p style={{textAlign:"left"}}>{this.mapopts[this.props.maptype].modalinfo.intro}</p>
-            <p style={{textAlign:"left"}}><b>Methodology:</b><br/>{this.mapopts[this.props.maptype].modalinfo.methodology}</p>
-            <p style={{textAlign:"left"}}>{this.mapopts[this.props.maptype].modalinfo.moreinfo} 
+            <h2>{this.mapopts[this.props.maptype].modalinfo.title}</h2>
+            <p>{this.mapopts[this.props.maptype].modalinfo.intro}</p>
+            <p><b>Methodology:</b><br/>{this.mapopts[this.props.maptype].modalinfo.methodology}</p>
+            <p>{this.mapopts[this.props.maptype].modalinfo.moreinfo} 
               <a href={this.mapopts[this.props.maptype].modalinfo.moreinfolink} target="_blank">{this.mapopts[this.props.maptype].modalinfo.moreinfolink}</a>
             </p>
           </div>

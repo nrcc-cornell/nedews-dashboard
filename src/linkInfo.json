@@ -131,6 +131,12 @@
     "image": "samples/cpc-sm_sample.gif",
     "text": "Climate Prediction Center estimated soil moisture using a one-layer hydrological model. The model takes observed precipitation and temperature and calculates soil moisture, evaporation and runoff. The potential evaporation is estimated from observed temperature."
 },
+"cpc-hazards": {
+    "anchor": "CPC Week 2 Hazards Outlook",
+    "href": "https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php",
+    "image": "samples/cpc-hazards_sample.png",
+    "text": "Climate Prediction Center outlook for potential weather hazards for the upcoming 8-14 day period. The product is updated every weekday and includes the experimental Rapid Onset Drought hazard type."
+},
 "spei": {
     "anchor": "SPEI Global Drought Monitor",
     "href": "https://spei.csic.es/map/maps.html#months=1",

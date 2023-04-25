@@ -32,6 +32,11 @@ export default class EddiMaps extends Component {
     })
     return (
       <Collapsible trigger={mapHeader} triggerTagName="h4" open={false} transitionTime={200}>
+        <div style={{border:"1pt solid #555d2f", margin:"0.5em", padding:"6px", backgroundColor:"pink", color:"#darkgreen", fontSize:"80%", textAlign:"center"}}>
+          <span>Please read <a href="https://psl.noaa.gov/eddi/warn.html" target="_blank">this</a> for an issue 
+          with potentially incorrect input data to EDDI causing excessive dry conditions being indicated over 
+          the Northeast and North Central US.</span>
+        </div>
         <ImageGallery 
           items={pcpnMaps} 
           thumbnailPosition="top"

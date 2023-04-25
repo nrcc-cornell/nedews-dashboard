@@ -115,7 +115,7 @@ export default class MarkerMaps extends Component {
               }
             </Pane>
           </Map>
-          {this.props.mapType === "nrcc" ? <NrccSpiLegend mapDate={this.props.mapDate}/> : <UsgsLegend mapDate={this.props.mapDate} mapType={this.props.mapType} />}          
+          {this.props.mapType === "nrcc" ? <NrccSpiLegend mapDate={this.props.mapDate}/> : <UsgsLegend mapDate={this.props.mapDate} mapType={this.props.mapType} cagType={this.props.cagType} />}          
       </div>
     )
   }
