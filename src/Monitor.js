@@ -8,7 +8,7 @@ import HprccSpiMaps from './HprccSpiMaps'
 import OutlookMaps from './OutlookMaps'
 import UsgsMaps from './UsgsMaps'
 import EddiMaps from './EddiMaps'
-import SportMaps from './SportMaps'
+//import SportMaps from './SportMaps'
 import NwmMaps from './NwmMaps'
 import NrccSpiMaps from './NrccSpiMaps'
 import KbdiMap from './KbdiMap'
@@ -51,7 +51,6 @@ export default class App extends Component {
         <KbdiMap      selectedState={this.state.selectedState} />
         <NwmMaps      selectedState={this.state.selectedState} maptype={"sf"} mapnames={this.nwmSfMaps} />
         <NwmMaps      selectedState={this.state.selectedState} maptype={"sm"} mapnames={this.nwmSmMaps} />
-        <SportMaps />
         <EddiMaps />
         <OutlookMaps  selectedState={this.state.selectedState} />
       </div>
@@ -63,4 +62,5 @@ export default class App extends Component {
         <AcisGeoMaps  selectedState={this.state.selectedState} classNames="marker-map" mapend={"current"} mapdefs={{timeperiod: "mn6ppct", mapTitle: "6-Month Precipitation", maptype: "qpf"}} mapnames={this.lastweekAcisMaps} />
         <SpiMaps      selectedState={this.state.selectedState} />
         <HprccGisMaps selectedState={this.state.selectedState} />
+        <SportMaps />
 */

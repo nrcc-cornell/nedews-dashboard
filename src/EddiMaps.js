@@ -35,7 +35,9 @@ export default class EddiMaps extends Component {
         <div style={{border:"1pt solid #555d2f", margin:"0.5em", padding:"6px", backgroundColor:"pink", color:"#darkgreen", fontSize:"80%", textAlign:"center"}}>
           <span>Please read <a href="https://psl.noaa.gov/eddi/warn.html" target="_blank">this</a> for an issue 
           with potentially incorrect input data to EDDI causing excessive dry conditions being indicated over 
-          the Northeast and North Central US.</span>
+          the Northeast during periods last winter with snow cover. Currently, any EDDI data that are of a long 
+          enough timescale to have included data from the snow-covered period will be biased hot and therefore dry.
+          </span>
         </div>
         <ImageGallery 
           items={pcpnMaps} 
