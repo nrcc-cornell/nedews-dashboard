@@ -20,11 +20,15 @@ export default class AcisPcpnMaps extends Component {
 
   formatDMend = () => {
     // Tuesday before last Thursday
-    var d = new Date()
+    var d = new Date(), dmonth, ddate, dmonthstr, ddatestr
     while (true) {
       if (d.getDay() === 4) {
         d.setDate(d.getDate() - 2)
-        return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
+        dmonth = d.getMonth() + 1
+        ddate = d.getDate()
+        dmonthstr = dmonth < 10 ? ("0" + dmonth) : dmonth
+        ddatestr = ddate < 10 ? ("0" + ddate) : ddate
+        return d.getFullYear() + "-" + dmonthstr + "-" + ddatestr
       }
       d.setDate(d.getDate() - 1)
     }
