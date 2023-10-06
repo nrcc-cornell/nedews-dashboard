@@ -24,19 +24,19 @@ export default class UsgsMaps extends Component {
     }
     this.streamflows = [
       {
-        file: "./data/flowrt.json",
-        title: "Real-Time"
+        file: "./data/sf_1d.json",
+        title: "1-Day"
       },
       {
-        file: "./data/flow7d.json",
+        file: "./data/sf_7d.json",
         title: "7-Day"
       },
       {
-        file: "./data/flow14d.json",
+        file: "./data/sf_14d.json",
         title: "14-Day"
       },
       {
-        file: "./data/flow28d.json",
+        file: "./data/sf_28d.json",
         title: "28-Day"
       }
     ]
@@ -47,10 +47,10 @@ export default class UsgsMaps extends Component {
 
   getSfMarkers = (flowfile) => {
     const sfCategoryColors = [
-      null,
+      //null,
       'red',
       'darkred',
-      'darkred',
+      //'darkred',
       'darkorange',
       'lime',
       'cyan',
@@ -101,10 +101,11 @@ export default class UsgsMaps extends Component {
         results.data.data.forEach(f => {
           const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P365D"
 //          removed href2 pending replacement
-//          const href2 = "https://groundwaterwatch.usgs.gov/BandPlots-small/" + f.state + "/sm_" + f.siteid + ".png"
+          const href2_usdm = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=usdm"
+          const href2_usgs = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=default"
 //          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1, href2]})
-          usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement date: "+f.mdate, href1]})
-          usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement date: "+f.mdate, href1]})
+          usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usdm]})
+          usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usgs]})
         })
         this.setState({cagmarkers: {usgs:usgsmarkers, usdm:usdmmarkers}})
         this.setState({gwmarkers: this.state.cagtype === 'usdm' ? usdmmarkers : usgsmarkers, wellsdate: results.data.date})

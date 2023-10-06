@@ -13,21 +13,21 @@ export default class UsgsLegend extends Component {
         groundwater: {
           "href1": "https://waterdata.usgs.gov/nwis/gw",
           "text1": "USGS Groundwater",
-          "href2": "https://dashboard.waterdata.usgs.gov/app/nwd/lang-en/?aoi=default",
-          "text2": "Info"
+//          "href2": "https://dashboard.waterdata.usgs.gov/app/nwd/lang-en/?aoi=default",
+//          "text2": "Info"
         }, 
         streamflow: {
           "href1": "https://waterwatch.usgs.gov",
           "text1": "USGS WaterWatch",
-          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
-          "text2": "Streamflow"
+//          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
+//          "text2": "Streamflow"
         }
       }
     }
 
   handleOpenModal = (e) => {
-    e.preventDefault();
-    this.setState({ showModal: true })
+    //e.preventDefault();
+    this.setState({ showModal: e })
   }
   
   handleCloseModal = () => {
@@ -37,8 +37,8 @@ export default class UsgsLegend extends Component {
   render() {
     const href1 = this.legend_defs[this.props.mapType]["href1"],
           text1 = this.legend_defs[this.props.mapType]["text1"],
-          href2 = this.legend_defs[this.props.mapType]["href2"],
-          text2 = this.legend_defs[this.props.mapType]["text2"],
+          //href2 = this.legend_defs[this.props.mapType]["href2"],
+          //text2 = this.legend_defs[this.props.mapType]["text2"],
           mapType = this.props.mapType,
           cagType = this.props.cagType
     return (
@@ -79,7 +79,7 @@ export default class UsgsLegend extends Component {
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href={href2} target="_blank">{text2}</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() => this.handleOpenModal('sf')}>About this map</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
@@ -121,7 +121,7 @@ export default class UsgsLegend extends Component {
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={this.handleOpenModal}>About this map</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() => this.handleOpenModal('gw')}>About this map</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
@@ -164,14 +164,14 @@ export default class UsgsLegend extends Component {
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="11">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={this.handleOpenModal}>About this map</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="11">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() =>this.handleOpenModal('gw')}>About this map</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
         }
 
         <Modal 
-          open={this.state.showModal}
+          open={this.state.showModal === 'gw' || this.state.showModal === 'sf'}
           onClose={this.handleCloseModal} 
           className="modal-container-container"
           >
@@ -179,21 +179,43 @@ export default class UsgsLegend extends Component {
             <Tooltip title="Close">
               <Cancel onClick={this.handleCloseModal} />
             </Tooltip>
-            <h2>Groundwater Status Map</h2>
-            <p>
-              This map is based on observations retrieved from the <a href="https://waterservices.usgs.gov/rest/IV-Service.html" target="blank">USGS Instantaneous Values Web Service</a>. 
-              Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS. USGS data are provided 
-              to meet the need for timely best science and on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages 
-              resulting from the authorized or unauthorized use of the data. 
-            </p>
-            <p >
-              Station percentile values used in this map were computed by NRCC. They are based on the historical data occurring within a 31-day window centered on the date of interest 
-              and filtered down to just the measurement taken closest to the date of interest for each year. These percentile values, therefore, may differ from those available from 
-              other sources, where other methods of percentile computation may have been employed.
-            </p>
+            {this.state.showModal === 'gw' &&
+              <React.Fragment>
+                <h2>Groundwater Status Map</h2>
+                <p>
+                  This map is based on observations retrieved from the <a href="https://waterservices.usgs.gov/rest/DV-Service.html" target="blank">USGS Daily Values Site Web Service</a> and <a href="https://waterservices.usgs.gov/rest/GW-Levels-Service.html" target="blank">USGS Groundwater Levels Web Service</a>. 
+                  Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS. USGS data are provided 
+                  to meet the need for timely best science and on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages 
+                  resulting from the authorized or unauthorized use of the data. 
+                </p>
+                <p >
+                  Station percentile values used in this map were computed by NRCC. They are based on the historical data occurring within a 31-day window centered on the date of interest 
+                  and filtered down to just the measurement taken closest to the date of interest for each year. These percentile values, therefore, may differ from those available from 
+                  other sources, where other methods of percentile computation may have been employed.
+                </p>
+              </React.Fragment>
+            }
+            {this.state.showModal === 'sf' &&
+              <React.Fragment>
+                <h2>Streamflow Status Map</h2>
+                <p>
+                  This map is based on observations retrieved from the <a href="https://waterservices.usgs.gov/rest/DV-Service.html" target="blank">USGS Daily Values Site Web Service</a>. 
+                  Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS. USGS data are provided 
+                  to meet the need for timely best science and on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages 
+                  resulting from the authorized or unauthorized use of the data. 
+                </p>
+                <p >
+                  Station percentile values plotted on this map were computed by NRCC. They are based on the historical data occurring within 1-, 7-, 14-, and 28-day windows ending on the date of interest 
+                  and summarized as the median value for the period for each year. Percentiles were computed for stations with at least 20 years of historical data. These percentile values may differ from those available from 
+                  other sources.
+                </p>
+              </React.Fragment>
+            }
           </div>
         </Modal>
       </div>
     )
   }
 }
+
+//<a href={href2} target="_blank">{text2}</a>;

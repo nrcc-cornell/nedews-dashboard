@@ -105,7 +105,7 @@ export default class MarkerMaps extends Component {
                           {1:<div>{m.data[0]}</div>,
                            2:<div style={{textAlign:"center"}}>{m.data[0]}<br/>{m.data[1]}</div>,
                            3:<div style={{textAlign:"center"}}>{m.data[0]}<br/>{m.data[1]}<br/><a href={m.data[2]} target="blank">USGS site page (new tab)</a></div>,
-                           4:<div style={{textAlign:"center"}}>{m.data[0]}<br/>{m.data[1]}<br/><a href={m.data[2]} target="blank">USGS site page (new tab)</a><br/><a href={m.data[3]} target="blank">Site statistics (new tab)</a></div>,
+                           4:<div style={{textAlign:"center"}}>{m.data[0]}<br/>{m.data[1]}<br/><a href={m.data[2]} target="blank">USGS site page (new tab)</a><br/><a href={m.data[3]} target="blank">Percentile graph (new tab)</a></div>,
                         }[m.data.length]
                         }
                       </Popup>
