@@ -24,19 +24,19 @@ export default class UsgsMaps extends Component {
     }
     this.streamflows = [
       {
-        file: "./data/sf_1d.json",
-        title: "1-Day"
+        file: "./data/flowrt.json",         //"./data/sf_1d.json",
+        title: "Realtime",           //"1-Day"
       },
       {
-        file: "./data/sf_7d.json",
+        file: "./data/flow7d.json",         //"./data/sf_7d.json",
         title: "7-Day"
       },
       {
-        file: "./data/sf_14d.json",
+        file: "./data/flow14d.json",         //"./data/sf_14d.json",
         title: "14-Day"
       },
       {
-        file: "./data/sf_28d.json",
+        file: "./data/flow28d.json",         //"./data/sf_28d.json",
         title: "28-Day"
       }
     ]
@@ -50,7 +50,7 @@ export default class UsgsMaps extends Component {
       //null,
       'red',
       'darkred',
-      //'darkred',
+      'darkred',  //remove for NRCC  backup classes
       'darkorange',
       'lime',
       'cyan',
@@ -62,7 +62,8 @@ export default class UsgsMaps extends Component {
       .then(results => {
         results.data.data.forEach(f => {
           const href = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=00065&period=P30D"
-          markers.push({position:f.position, fillColor:sfCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href]})
+          const href2 = "https://waterwatch.usgs.gov/?id=wwchart_sitedur&ofmt=plot_mvbg&site_no=" + f.siteid + "&nyr=1"
+          markers.push({position:f.position, fillColor:sfCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href, href2]})
         })
         this.setState({sfmarkers: markers, flowdate: results.data.date})
       })

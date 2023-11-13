@@ -13,14 +13,16 @@ export default class UsgsLegend extends Component {
         groundwater: {
           "href1": "https://waterdata.usgs.gov/nwis/gw",
           "text1": "USGS Groundwater",
+          "href2": null,
+          "text2": null,
 //          "href2": "https://dashboard.waterdata.usgs.gov/app/nwd/lang-en/?aoi=default",
 //          "text2": "Info"
         }, 
         streamflow: {
           "href1": "https://waterwatch.usgs.gov",
           "text1": "USGS WaterWatch",
-//          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
-//          "text2": "Streamflow"
+          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
+          "text2": "Streamflow"
         }
       }
     }
@@ -37,8 +39,8 @@ export default class UsgsLegend extends Component {
   render() {
     const href1 = this.legend_defs[this.props.mapType]["href1"],
           text1 = this.legend_defs[this.props.mapType]["text1"],
-          //href2 = this.legend_defs[this.props.mapType]["href2"],
-          //text2 = this.legend_defs[this.props.mapType]["text2"],
+          href2 = this.legend_defs[this.props.mapType]["href2"],
+          text2 = this.legend_defs[this.props.mapType]["text2"],
           mapType = this.props.mapType,
           cagType = this.props.cagType
     return (
@@ -79,7 +81,7 @@ export default class UsgsLegend extends Component {
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() => this.handleOpenModal('sf')}>About this map</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href={href2} target="_blank">{text2}</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
@@ -218,4 +220,4 @@ export default class UsgsLegend extends Component {
   }
 }
 
-//<a href={href2} target="_blank">{text2}</a>;
+//<a href='#' onClick={() => this.handleOpenModal('sf')}>About this map</a>
