@@ -47,7 +47,7 @@ export default class UsgsMaps extends Component {
 
   getSfMarkers = (flowfile) => {
     const sfCategoryColors = [
-      //null,
+      null,       //remove for NRCC  backup classes
       'red',
       'darkred',
       'darkred',  //remove for NRCC  backup classes
