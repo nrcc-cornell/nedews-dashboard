@@ -6,8 +6,8 @@
     "text": "The U.S. Drought Monitor is a weekly map of drought conditions produced jointly by the National Oceanic and Atmospheric Administration, the U.S. Department of Agriculture, and the National Drought Mitigation Center at the University of Nebraska-Lincoln.  The weekly maps are released at 8:30 a.m. Eastern Standard Time each Thursday and are assessments of past conditions based on data through 7 a.m. Eastern time (8 a.m. Eastern Daylight Time) the preceding Tuesday. The US Drought Monitor web site hosts an assortment of drought-related data and resources."
 },
 "ahps": {
-    "anchor": "NWS AHPS precipitation maps",
-    "href": "https://water.weather.gov/precip/index.php?analysis_date=1518998400&lat=43.9295499729&location_name=nerfc&location_type=rfc&lon=-73.0810549062&precip_layer=0.75&product=percent&recent_type=today&rfc_layer=-1&state_layer=1.0&hsa_layer=-1&county_layer=0.75&time_frame=last7days&time_type=recent&units=eng&zoom=6&domain=current",
+    "anchor": "NWS NWPS precipitation maps",
+    "href": "https://water.noaa.gov/#@=-75.1535991,42.2157613,5.0252764&b=topographic&g=obsFcst,0!0!0!0!0!0!0!0!0!0!0!0!0!0!0!0!0!0!0!0,0.5,0!0!0!0!0,0,0&ab=0,0,%23D94B4A,1,1,1,%23cccccc,1,0,0,%23B243B1,1,0,0,%2398E09A,1&a=hydrologic,0.35&s=0,0,0.9,0.9&n=false,%2372afe9,0.9,0,0.9,0,0.9&p=true,0.75,0,7,0,1,2024,4,18,0&d=0,0,1,1,1,1,1,1,%23006EFF,1,%23006EFF,1,%23006EFF&q=",
     "image": "samples/ahps_sample.jpg",
     "text": "National Weather Service Advanced Hydrologic Prediction Service precipitation maps are available for various time periods. Maps are based on a gridded field with a spatial resolution of roughly 4x4 km. Precipitation values are derived using a multisensor approach incorporating radar precipitation estimates, which are bias corrected with ground rainfall gauge reports. In areas with poor radar coverage, satellite precipitation estimates are also used. Maps are updated throughout the day and are usually complete for the entire country by 12:30 ET."
 },
@@ -42,8 +42,8 @@
     "text": "KBDI computed by NRCC using PRISM daily temperature and precipitation and NCEI gridded annual precipitation data."
 },
 "edd": {
-    "anchor": "NWS Enhanced Data Display",
-    "href": "https://preview.weather.gov/edd/?lat=44.1061&lon=-73.6323&zoom=7&ql=FFFFFFFFFFFFFFFFFFFFFFF&ml=Day_1-7_QPF|445|0.8&bm=Blank&lsr=F&lsrp=3&lsra=&mp=F&lfc=T&rt=both&rf=major|moderate|minor|action&ht=threat&pid=N0Q&sf=GOES_Infrared_-_SSEC&ri=5&obs=TFTTFFFFFFTF&is=1&ou=mph&od=-50&ships=F&cluster=T&radO=0.75&satO=0.75&hazO=0.3&tropO=0.7&ndfdO=0.7&ndfdR=Continental_US&ndfdF=Maximum_Temperature_(ºF)&ndfdT=12&ndfdTS=&lviz=T&fullscreen=F&fxt=Point_(Text_Only)&ppd=24&pdy=3&satf=60&obsync=F&flavor=Advanced&tfo=null&tfd=null&tfw=null&ht=F&hd=F&ho=null&hf=null&hb=F&hsps=F&ot=Meteorological_Observation&hvt=F&sht=F&ehm=T&uwl=F&ec=F&lll=F&keys=&ofont=14&opnt=1.2&oset=15&oan=F&oap=1&oid=F&cc=Pub&oo=F&cs=F&rs=P&ofbs=",
+    "anchor": "NWS GIS Viewer",
+    "href": "https://viewer.weather.noaa.gov/general#layers=42904+40090+40091&x=-74.45136&y=44.96468&z=9.7&panel=layer",
     "image": "samples/edd_sample.jpg",
     "text": "The National Weather Service Enhanced Data Display is a platform that serves as a gateway to distribute high spatial and temporal resolution data that NWS forecasters generate. It allows users access to these raw data and provides the means to manipulate the data for their needs. EDD provides current and recently observed data, as well as, deterministic and probabilistic forecasts."
 },
@@ -196,6 +196,12 @@
     "href": "https://newengland.water.usgs.gov/web_app/GWW/GWW.html",
     "image": "samples/negs_sample.png",
     "text": "Map displaying wells that are part of the National Groundwater Monitoring Network which includes wells not measured by USGS, for example in New Hampshire and Vermont. You can also turn on and off continuous and periodically measurement wells (measured generally 1 time per month)."
+},
+"nygs_gw": {
+    "anchor": "Groundwater Levels in New York",
+    "href": "https://rconnect.usgs.gov/content/99cc8726-7baa-45af-a5bd-bced25ff82db/",
+    "image": "samples/nygs_sample.png",
+    "text": "Map displaying wells that are maintained by the U.S. Geological Survey New York Water Science Center with links to specific site data. Checkboxes allow you to turn on and off various aquifers."
 },
 "me-wells": {
     "anchor": "Maine Dry Well Survey",

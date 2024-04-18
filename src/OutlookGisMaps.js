@@ -195,6 +195,11 @@ export default class OutlookGisMaps extends Component {
       })
       .catch(err => {
         console.log("Outlook Lines Error: " + err)
+        this.setState({
+          clines: null,
+          mapDate: "This map is temporarily unavailable",
+          contours: null
+        })
       });
   }
 
@@ -263,7 +268,7 @@ export default class OutlookGisMaps extends Component {
         {this.state.contours && this.props.mapdefs.maptype === 'qpf' &&
           <QpfGisLegend colorCodes={this.colorCodes[this.props.mapdefs.maptype]} contours={this.state.contours} />
         }
-        {(this.props.mapdefs.maptype === 'prcpoutlooks' || this.props.mapdefs.maptype === 'tempoutlooks') &&
+        {this.state.contours && (this.props.mapdefs.maptype === 'prcpoutlooks' || this.props.mapdefs.maptype === 'tempoutlooks') &&
           <OutlookGisLegend colorCodes={this.colorCodes[this.props.mapdefs.maptype]}  contours={this.state.contours} />
         }
         {(this.props.mapdefs.maptype === 'msprcpoutlooks' || this.props.mapdefs.maptype === 'mstempoutlooks') &&
