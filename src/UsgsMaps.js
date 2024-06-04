@@ -101,10 +101,8 @@ export default class UsgsMaps extends Component {
       .then(results => {
         results.data.data.forEach(f => {
           const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P365D"
-//          removed href2 pending replacement
           const href2_usdm = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=usdm"
           const href2_usgs = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=default"
-//          markers.push({position:f.position, fillColor:gwCategoryColors[f.class], data:[f.data[0], "Measurement date: "+f.data[1], href1, href2]})
           usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usdm]})
           usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usgs]})
         })

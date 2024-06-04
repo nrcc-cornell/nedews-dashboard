@@ -12,10 +12,10 @@
     "text": "National Weather Service Advanced Hydrologic Prediction Service precipitation maps are available for various time periods. Maps are based on a gridded field with a spatial resolution of roughly 4x4 km. Precipitation values are derived using a multisensor approach incorporating radar precipitation estimates, which are bias corrected with ground rainfall gauge reports. In areas with poor radar coverage, satellite precipitation estimates are also used. Maps are updated throughout the day and are usually complete for the entire country by 12:30 ET."
 },
 "nc-ahps": {
-    "anchor": "NC Integrated Water Portal",
-    "href": "https://legacy.climate.ncsu.edu/water/map",
+    "anchor": "SRCC Integrated Water Portal",
+    "href": "https://srcc.tamu.edu/water_portal/",
     "image": "samples/nciwp_sample.png",
-    "text": "[May not be available after June 30, 2021.] AHPS-based maps of SPEI, SPI, SPI Blend, KBDI, and precipitaiton provided by the North Carolina Office. Several time periods from 1-day up to 36-months."
+    "text": "AHPS-based maps of SPI, SPI Blend, and precipitation (total, departure, percent of normal) provided by the Southern Regional Climate Center. Several time periods from 1-day up to 36-months."
 },
 "hprcc-acis": {
     "anchor": "HPRCC ACIS maps",
