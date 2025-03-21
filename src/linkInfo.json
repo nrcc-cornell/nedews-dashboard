@@ -208,5 +208,11 @@
     "href": "https://maine-dry-well-survey-maine.hub.arcgis.com",
     "image": "samples/mewells_sample.png",
     "text": "Results of responses to an on-going survey of reports of dry wells by the Maine Emergency Management Agency."
+},
+"ag-canada": {
+    "anchor": "Agroclimate Maps (Canada)",
+    "href": "https://agriculture.canada.ca/atlas/apps/aef/main/index_en.html?AGRIAPP=17",
+    "image": "samples/agcanada_sample.png",
+    "text": "Precipitation and other drought indices for Canada."
 }
 }

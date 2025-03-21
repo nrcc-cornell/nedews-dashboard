@@ -101,14 +101,14 @@ export default class OutlookMaps extends Component {
                 </Grid>
                 <Grid item xs={12} sm={3}>
                   <OutlookGisMaps selectedState={this.props.selectedState} mapdefs={this.mapdefs.qpf_day2} classNames={bigClassName} handleMapClick={this.handleMapClick} />
-                </Grid>
-                <Grid item xs={12} sm={3}>
+                 </Grid>
+                <Grid item xs={12} sm={3} >
                   <OutlookGisMaps selectedState={this.props.selectedState} mapdefs={this.mapdefs.qpf_day3} classNames={bigClassName} handleMapClick={this.handleMapClick} />
                 </Grid>
                 <Grid item xs={12} sm={3}>
                   <OutlookGisMaps selectedState={this.props.selectedState} mapdefs={this.mapdefs.qpf_7day} classNames={bigClassName} handleMapClick={this.handleMapClick} />
                 </Grid>
-              </Grid>
+              </Grid>          
 
               <Grid container spacing={0} justify="flex-start">
                 <Grid item xs={12} sm={3}>
@@ -168,3 +168,9 @@ export default class OutlookMaps extends Component {
     )
   }
 }
+/*
+                  <a href="https://www.wpc.ncep.noaa.gov/qpf/fill_94qwbg.gif" target="_blank" rel="nofollow">View Day 1 QPF</a>
+                  <a href="https://www.wpc.ncep.noaa.gov/qpf/fill_98qwbg.gif" target="_blank" rel="nofollow">View Day 2 QPF</a>
+                  <a href="https://www.wpc.ncep.noaa.gov/qpf/fill_99qwbg.gif" target="_blank" rel="nofollow">View Day 3 QPF</a>
+                  <a href="https://www.wpc.ncep.noaa.gov/qpf/p168i.gif" target="_blank" rel="nofollow">View 7-Day QPF</a>
+*/       

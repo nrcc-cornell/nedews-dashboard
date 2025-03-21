@@ -7,7 +7,6 @@ import QpfGisLegend from './QpfGisLegend'
 import OutlookGisLegend from './OutlookGisLegend'
 import MsoutlookGisLegend from './MsoutlookGisLegend'
 import MarkerMaps from './MarkerMaps'
-import sortPolygons from './Stacker'
 
 export default class OutlookGisMaps extends Component {
   constructor(props) {
@@ -172,7 +171,28 @@ export default class OutlookGisMaps extends Component {
   }
 
   componentDidMount = () => {
-    axios.get("./data/" + this.props.mapdefs.timeperiod + ".json")
+    if (this.props.mapdefs.maptype === 'qpf') {
+      fetch("./data/" + this.props.mapdefs.timeperiod + ".geojson")
+      .then(response => response.json())
+      .then(results => {
+        const qpf_list = [];
+        var mapdate = ""
+        results.features.forEach(feature => {
+          const properties = feature.properties;
+          mapdate = properties.VALID_TIME;
+          if (!qpf_list.includes(properties.QPF)) {
+            qpf_list.push(properties.QPF);
+          }
+          // Access individual properties like properties.name, properties.id, etc.
+        });
+        this.setState({
+          clines: results,
+          mapDate:  "Valid: " + mapdate,
+          contours: qpf_list.sort((a,b) => a - b),
+        })
+      })
+    } else {
+      axios.get("./data/" + this.props.mapdefs.timeperiod + ".json")
       .then(results => {
         const fprops = results.data.map_features.features[0].properties
         let mapdate = ''
@@ -182,10 +202,6 @@ export default class OutlookGisMaps extends Component {
           mapdate = fprops.Start_Date + " to " + fprops.End_Date
         } else if (fprops.Valid_Seas) {
           mapdate = fprops.Valid_Seas
-        }
-        // for qpf maps, look for decreasing bulleyes
-        if (this.props.mapdefs.timeperiod.indexOf("qpf") >= 0) {
-          results.data.map_features = sortPolygons(results.data.map_features,"QPF")
         }
         this.setState({
           clines: results.data.map_features,
@@ -200,7 +216,8 @@ export default class OutlookGisMaps extends Component {
           mapDate: "This map is temporarily unavailable",
           contours: null
         })
-      });
+      })
+    }
   }
 
   getStyle = (feature) => {
