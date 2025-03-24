@@ -180,13 +180,26 @@ export default class OutlookGisMaps extends Component {
         results.features.forEach(feature => {
           const properties = feature.properties;
           mapdate = properties.VALID_TIME;
+          //build like of qpf levels used
           if (!qpf_list.includes(properties.QPF)) {
             qpf_list.push(properties.QPF);
           }
-          // Access individual properties like properties.name, properties.id, etc.
+        });
+        //sort features by qpf
+        const sortedResults = [...results.features].sort((a, b) => {
+          const propertyA = a.properties["QPF"];
+          const propertyB = b.properties["QPF"];
+        
+          if (propertyA < propertyB) {
+            return -1; // a comes before b
+          }
+          if (propertyA > propertyB) {
+            return 1; // a comes after b
+          }
+          return 0; // a and b are equal
         });
         this.setState({
-          clines: results,
+          clines: sortedResults,
           mapDate:  "Valid: " + mapdate,
           contours: qpf_list.sort((a,b) => a - b),
         })
