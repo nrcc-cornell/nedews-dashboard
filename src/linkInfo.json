@@ -91,7 +91,7 @@
 },
 "vic": {
     "anchor": "VIC Soil Moisture",
-    "href": "http://www.hydro.ucla.edu/SurfaceWaterGroup/forecast/monitor/curr/conus.mexico/main_sm.shtml",
+    "href": "https://hydro.ucla.edu/SurfaceWaterGroup/forecast/monitor/curr/conus.mexico/main_sm.shtml",
     "image": "samples/vic_sample.png",
     "text": "Soil moisture from UCLA VIC model. Maps have 1 to 2-day lag. National and links to regional maps available."
 },
