@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Banner extends Component {
   constructor () {
     super()
-    this.nidisLogo = "img/nidisLogo.png"
+    this.nidisLogo = "img/noaa-nidis-logo.png"
     this.nrccLogo = "img/nrccLogoStackedT.png"
   }
 
