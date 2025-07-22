@@ -187,7 +187,7 @@
 },
 "nhdes-gw": {
     "anchor": "NHGS Groundwater Level Monitoring",
-    "href": "https://nhdes.maps.arcgis.com/apps/webappviewer/index.html?id=521022e32a1540c2b281a071aa5421b7",
+    "href": "https://nhdes.maps.arcgis.com/apps/dashboards/6b333fa640994c17a31993a9e5298043",
     "image": "samples/nhdes_sample.png",
     "text": "This WebMap displays the status of the most recent groundwater level measurements relative to the period of record monthly statistics calculated for the 30 groundwater wells monitored by NHGS, as well as the 3 USGS-monitored wells located in NH. Figures showing a 12-Month hydrographs with site statistics and a 24-month plots of groundwater measurements are available by selecting a site."
 },
