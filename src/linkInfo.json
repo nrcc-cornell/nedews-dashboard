@@ -162,10 +162,10 @@
     "text": "Maps of snow water equivalent from snow surveys conducted throughout New York and New England, and compiled by NRCC. Updated bi-weekly on Friday beginning in early Janary and continuing to as late as early May."
 },
 "vtanr": {
-    "anchor": "VT Drinking Water Drought Reporter",
-    "href": "https://anrmaps.vermont.gov/websites/droughtreporter/",
-    "image": "samples/vtanr_sample.png",
-    "text": "Vermont Agency of Natural Resources crowd-sourced reports of drinking water shortages in Vermont. "
+    "anchor": "VT Drought Reporter",
+    "href": "https://experience.arcgis.com/experience/1d3753b053804415bd0fd00a813a115f/page/Welcome",
+    "image": "samples/vtanr_sample.jpg",
+    "text": "Vermont Agency of Natural Resources crowd-sourced reports of drinking water shortages and drought impacts in Vermont. "
 },
 "enso": {
     "anchor": "NOAA ENSO Portal",
@@ -208,6 +208,12 @@
     "href": "https://maine-dry-well-survey-maine.hub.arcgis.com",
     "image": "samples/mewells_sample.png",
     "text": "Results of responses to an on-going survey of reports of dry wells by the Maine Emergency Management Agency."
+},
+"cmor": {
+    "anchor": "CMOR (Condition Monitoring Observer Reports",
+    "href": "https://droughtimpacts.unl.edu/Tools/ConditionMonitoringObservations.aspx",
+    "image": "samples/cmor_sample.png",
+    "text": "The Condition Monitoring Observer Reports (CMOR) system is used to report drought-related conditions and impacts, and view a map of reports from around the country."
 },
 "ag-canada": {
     "anchor": "Agroclimate Maps (Canada)",
