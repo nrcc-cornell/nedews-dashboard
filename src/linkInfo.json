@@ -163,7 +163,7 @@
 },
 "vtanr": {
     "anchor": "VT Drought Reporter",
-    "href": "https://experience.arcgis.com/experience/1d3753b053804415bd0fd00a813a115f/page/Welcome",
+    "href": "https://experience.arcgis.com/experience/be35cd1bf2c5407b9576f946f5b2f453",
     "image": "samples/vtanr_sample.jpg",
     "text": "Vermont Agency of Natural Resources crowd-sourced reports of drinking water shortages and drought impacts in Vermont. "
 },
@@ -220,5 +220,11 @@
     "href": "https://agriculture.canada.ca/atlas/apps/aef/main/index_en.html?AGRIAPP=17",
     "image": "samples/agcanada_sample.png",
     "text": "Precipitation and other drought indices for Canada."
+},
+"nh-wells": {
+    "anchor": "New Hampshire Dry Well Survey",
+    "href": "https://survey123.arcgis.com/share/b7734a880fe6419db8b18a7d12a27d5d",
+    "image": "samples/nhwells_sample.jpg",
+    "text": "Site where New Hampshire residents can report dry wells."
 }
 }

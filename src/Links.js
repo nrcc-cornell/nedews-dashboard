@@ -15,7 +15,7 @@ export default class Links extends Component {
       linkInfo: ""
     }
     this.linkKeys = ["usdm","ahps","nc-ahps","dmmaps","blends","usgs-sf","usgs-gw","negs_gw","nygs_gw","nhdes-gw","hprcc-acis","cmor","qdri","vdri","eddi","sport","grace","nldas","vic","cpc-sm","cpc-pdsi","cpc-topsoil",
-    "cpc-hazards","ag-canada","ne-sweq","edd","nidis","nrccdu","dir","spei","nyc-resv","me-wells","vtanr","enso","cocorahs" ]
+    "cpc-hazards","ag-canada","ne-sweq","edd","nidis","nrccdu","dir","spei","nyc-resv","vtanr","me-wells","nh-wells","enso","cocorahs" ]
   }
   
   handleHoverHelp = (info) => {
