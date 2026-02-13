@@ -13,16 +13,14 @@ export default class UsgsLegend extends Component {
         groundwater: {
           "href1": "https://waterdata.usgs.gov/nwis/gw",
           "text1": "USGS Groundwater",
-          "href2": null,
-          "text2": null,
 //          "href2": "https://dashboard.waterdata.usgs.gov/app/nwd/lang-en/?aoi=default",
 //          "text2": "Info"
         }, 
         streamflow: {
-          "href1": "https://waterwatch.usgs.gov",
-          "text1": "USGS WaterWatch",
-          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
-          "text2": "Streamflow"
+          "href1": "https://waterdata.usgs.gov",
+          "text1": "USGS Weather Data for the Nation",
+//          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
+//          "text2": "Streamflow"
         }
       }
     }
@@ -39,8 +37,8 @@ export default class UsgsLegend extends Component {
   render() {
     const href1 = this.legend_defs[this.props.mapType]["href1"],
           text1 = this.legend_defs[this.props.mapType]["text1"],
-          href2 = this.legend_defs[this.props.mapType]["href2"],
-          text2 = this.legend_defs[this.props.mapType]["text2"],
+//          href2 = this.legend_defs[this.props.mapType]["href2"],
+//          text2 = this.legend_defs[this.props.mapType]["text2"],
           mapType = this.props.mapType,
           cagType = this.props.cagType
     return (
@@ -72,16 +70,16 @@ export default class UsgsLegend extends Component {
                 <td rowSpan="2">High</td>
               </tr>
               <tr>
-                <td>&lt;10%</td>
-                <td>10-24%</td>
+                <td>&le;10%</td>
+                <td>10-25%</td>
                 <td>25-75%</td>
-                <td>76-90%</td>
+                <td>75-90%</td>
                 <td>&gt;90%</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href={href2} target="_blank">{text2}</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() =>this.handleOpenModal('sf')}>About this map</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
@@ -114,16 +112,16 @@ export default class UsgsLegend extends Component {
                 <td rowSpan="2">High</td>
               </tr>
               <tr>
-                <td>&lt;10%</td>
-                <td>10-24%</td>
+                <td>&le;10%</td>
+                <td>10-25%</td>
                 <td>25-75%</td>
-                <td>76-90%</td>
+                <td>75-90%</td>
                 <td>&gt;90%</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() => this.handleOpenModal('gw')}>About this map</a>; updated {this.props.mapDate}.</td>
+                <td colSpan="7">Data provided by <a href={href1} target="_blank">{text1}</a> - <a href='#' onClick={() =>this.handleOpenModal('sf')}>About this map</a>; updated {this.props.mapDate}.</td>
               </tr>
             </tfoot>
           </table>
@@ -201,15 +199,16 @@ export default class UsgsLegend extends Component {
               <React.Fragment>
                 <h2>Streamflow Status Map</h2>
                 <p>
-                  This map is based on observations retrieved from the <a href="https://waterservices.usgs.gov/rest/DV-Service.html" target="blank">USGS Daily Values Site Web Service</a>. 
-                  Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS. USGS data are provided 
-                  to meet the need for timely best science and on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages 
-                  resulting from the authorized or unauthorized use of the data. 
+                  This map is based on observations retrieved from the <a href="https://api.waterdata.usgs.gov" target="blank">USGS Water Data API</a>. 
+                  Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS.  
                 </p>
                 <p >
-                  Station percentile values plotted on this map were computed by NRCC. They are based on the historical data occurring within 1-, 7-, 14-, and 28-day windows ending on the date of interest 
-                  and summarized as the median value for the period for each year. Percentiles were computed for stations with at least 20 years of historical data. These percentile values may differ from those available from 
-                  other sources.
+                  Station percentile values plotted on this map were computed by NRCC using the 
+                  USGS <a href="https://water.usgs.gov/catalog/tools/0388b0a4-66ec-47ad-9ba9-07ac621ddd06/" target="blank">dataretrieval</a>
+                  &nbsp;and <a href="https://water.usgs.gov/catalog/tools/8ceba06b-08fe-437d-bf6e-4f843639b958/" target="blank">hyswap</a> tools. 
+                  Percentiles are based on approved historical data occurring within 1-, 7-, 14-, and 28-day windows ending on the date of interest 
+                  and summarized as the mean value for the period for each year. Current year percentile values may be based on either approved or provisional data. 
+                  Percentiles were computed for stations with at least 20 years of historical data.
                 </p>
               </React.Fragment>
             }
