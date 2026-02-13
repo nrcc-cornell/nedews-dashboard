@@ -201,6 +201,8 @@ export default class UsgsLegend extends Component {
                 <p>
                   This map is based on observations retrieved from the <a href="https://api.waterdata.usgs.gov" target="blank">USGS Water Data API</a>. 
                   Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS.  
+                  Note that for some streams, flow statistics may have been computed from mixed regulated
+                  and unregulated flows; this can affect depictions of flow conditions.
                 </p>
                 <p >
                   Station percentile values plotted on this map were computed by NRCC using the 
@@ -208,7 +210,7 @@ export default class UsgsLegend extends Component {
                   &nbsp;and <a href="https://water.usgs.gov/catalog/tools/8ceba06b-08fe-437d-bf6e-4f843639b958/" target="blank">hyswap</a> tools. 
                   Percentiles are based on approved historical data occurring within 1-, 7-, 14-, and 28-day windows ending on the date of interest 
                   and summarized as the mean value for the period for each year. Current year percentile values may be based on either approved or provisional data. 
-                  Percentiles were computed for stations with at least 20 years of historical data.
+                  Percentiles were computed for stations with at least 20 years of historical data. 
                 </p>
               </React.Fragment>
             }
