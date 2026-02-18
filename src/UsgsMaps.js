@@ -101,8 +101,8 @@ export default class UsgsMaps extends Component {
           const href1 = "https://waterdata.usgs.gov/monitoring-location/" + f.siteid + "/#parameterCode=72019&period=P365D"
           const href2_usdm = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=usdm"
           const href2_usgs = "https://nedews.nrcc.cornell.edu/gw/?id=" + f.siteid + "&cats=default"
-          usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usdm]})
-          usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement date: "+f.mdate, href1, href2_usgs]})
+          usdmmarkers.push({position:f.position, fillColor:usdmCategoryColors[f.usdm], data:[f.name, "Measurement: "+f.pctl+" percentile on " +f.mdate, href1, href2_usdm]})
+          usgsmarkers.push({position:f.position, fillColor:usgsCategoryColors[f.usgs], data:[f.name, "Measurement: "+f.pctl+" percentile on " +f.mdate, href1, href2_usgs]})
         })
         this.setState({cagmarkers: {usgs:usgsmarkers, usdm:usdmmarkers}})
         this.setState({gwmarkers: this.state.cagtype === 'usdm' ? usdmmarkers : usgsmarkers, wellsdate: results.data.date})
