@@ -11,14 +11,14 @@ export default class UsgsLegend extends Component {
       }
       this.legend_defs = {
         groundwater: {
-          "href1": "https://waterdata.usgs.gov/nwis/gw",
-          "text1": "USGS Groundwater",
+          "href1": "https://waterdata.usgs.gov/",
+          "text1": "  USGS Water Data for the Nation",
 //          "href2": "https://dashboard.waterdata.usgs.gov/app/nwd/lang-en/?aoi=default",
 //          "text2": "Info"
         }, 
         streamflow: {
           "href1": "https://waterdata.usgs.gov",
-          "text1": "USGS Weather Data for the Nation",
+          "text1": "USGS Water Data for the Nation",
 //          "href2": "https://waterwatch.usgs.gov/index.php?id=ww_current",
 //          "text2": "Streamflow"
         }
@@ -149,7 +149,7 @@ export default class UsgsLegend extends Component {
                 <td><div className="mapLegend-icon mapLegend-icon-w4"></div></td>
               </tr>
               <tr style={{height:"2.5em"}}>
-                <td><b>D4</b>:<br/> &lt;2%</td>
+                <td><b>D4</b>:<br/> &le;2%</td>
                 <td><b>D3</b>:<br/>2-5%</td>
                 <td><b>D2</b>:<br/>5-10%</td>
                 <td><b>D1</b>:<br/>10-20%</td>
@@ -183,15 +183,14 @@ export default class UsgsLegend extends Component {
               <React.Fragment>
                 <h2>Groundwater Status Map</h2>
                 <p>
-                  This map is based on observations retrieved from the <a href="https://waterservices.usgs.gov/rest/DV-Service.html" target="blank">USGS Daily Values Site Web Service</a> and <a href="https://waterservices.usgs.gov/rest/GW-Levels-Service.html" target="blank">USGS Groundwater Levels Web Service</a>. 
-                  Data include approved, quality-assured data, and more recent provisional data, whose accuracy has not been verified by USGS. USGS data are provided 
-                  to meet the need for timely best science and on the condition that neither the USGS nor the U.S. Government shall be held liable for any damages 
-                  resulting from the authorized or unauthorized use of the data. 
-                </p>
-                <p >
-                  Station percentile values used in this map were computed by NRCC. They are based on the historical data occurring within a 31-day window centered on the date of interest 
-                  and filtered down to just the measurement taken closest to the date of interest for each year. These percentile values, therefore, may differ from those available from 
-                  other sources, where other methods of percentile computation may have been employed.
+                  This map is based on daily values and field observations retrieved from the <a href="https://api.waterdata.usgs.gov" target="blank">USGS Water Data API</a>. 
+                  Station percentile values plotted on this map were computed by NRCC using the 
+                  USGS <a href="https://water.usgs.gov/catalog/tools/0388b0a4-66ec-47ad-9ba9-07ac621ddd06/" target="blank">dataretrieval</a>
+                  &nbsp;and <a href="https://water.usgs.gov/catalog/tools/8ceba06b-08fe-437d-bf6e-4f843639b958/" target="blank">hyswap</a> tools. 
+                  Ranges for the percentile clssses are based on the approved historical data occurring within a 30-day window centered on the date of interest 
+                  and filtered down to just the measurement taken closest to the date of interest for each year. Percentiles were 
+                  computed for stations with at least 10 years of historical data. Current year percentile values may be 
+                  based on either approved or provisional data. The accuracy of provisional data has not been verified by USGS. 
                 </p>
               </React.Fragment>
             }
