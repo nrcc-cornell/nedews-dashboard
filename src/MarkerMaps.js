@@ -30,8 +30,8 @@ export default class MarkerMaps extends Component {
     'md': [-79.48700,37.92245,-75.05063,39.72263],
     'wv': [-82.64199,37.20203,-77.71748,40.63859],
     'nedews': [-80.2,40.2,-66.6,47.7],
-    //region 'northeast': [-82.70, 37.20, -66.90, 47.60],
-    'northeast': [-82.70, 36.50, -66.90, 47.60],
+    'northeast': [-82.70, 37.20, -66.90, 47.60],
+    //'northeast': [-82.70, 36.50, -66.90, 47.60],
   }
   static statesOnMap = ['ny','vt','nh','me','ma','ct','ri','pa','nj','md','de','wv','va']
   static geoStyle = {color: "darkblue", weight:1, fillColor: "white", fillOpacity: 0.0}
