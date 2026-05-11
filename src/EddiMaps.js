@@ -41,7 +41,7 @@ export default class EddiMaps extends Component {
           slideInterval={9999}
         />
         <div style={{textAlign:"right", margin:"0 1em 1em 0"}}>
-          <a href="https://wwa.colorado.edu/publications/reports/EDDI_2-pager.pdf" target="_blank">About EDDI</a>
+          <a href="https://www.cpc.ncep.noaa.gov/products/Drought/eddi/" target="_blank">About EDDI</a>
         </div>
       </Collapsible>
     )
