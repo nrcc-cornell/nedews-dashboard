@@ -92,7 +92,7 @@ if (parseFloat(feature_prop[value_property]) === 25) {
         >
 
           <TileLayer
-              url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png"
+              url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}{r}.png?key=cb1_2c15_1_394e8631fc7220df9eb463b0"
               attribution='<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
           />
 
