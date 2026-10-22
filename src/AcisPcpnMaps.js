@@ -9,11 +9,11 @@ export default class AcisPcpnMaps extends Component {
     this.mapurl = 'NRCC_maps/'
     this.maptitles = {
       d7ptot: '7 Day Total',
-      d30ppct: '30 Day Pct',
-      d60ppct: '60 Day Pct',
-      d90ppct: '90 Day Pct',
-      mn6ppct: '6 Month Pct',
-      y1ppct: '1 Year Pct',
+      d30ppct: '30 Day Pct Normal',
+      d60ppct: '60 Day Pct Normal',
+      d90ppct: '90 Day Pct Normal',
+      mn6ppct: '6 Month Pct Normal',
+      y1ppct: '1 Year Pct Normal',
       dmwkptot: 'USDM Current Wk'
     }
   }
@@ -44,9 +44,11 @@ export default class AcisPcpnMaps extends Component {
       const mapname = this.mapurl + t + '_' + this.props.selectedState + '_' + mapend + '.png'
       pcpnMaps.push({
         original: mapname,
+        originalAlt: this.maptitles[t] + " Precipitation map",
         thumbnail: mapname,
         thumbnailTitle: this.maptitles[t] || "",
-        thumbnailLabel: this.maptitles[t] || ""
+        thumbnailLabel: this.maptitles[t] || "",
+        thumbnailAlt: this.maptitles[t] + " Precipitation map",
       })
     })
     return (

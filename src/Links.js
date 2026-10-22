@@ -33,7 +33,7 @@ export default class Links extends Component {
   renderLinks = () => {
     return (
       this.linkKeys.map((k) => 
-        <li key={k}>
+        <li key={k} style={{ height: "24px" }}>
           <HoverLink linkinfo={linkInfo[k]} handleHoverHelp={this.handleHoverHelp} handleOpenModal={this.handleOpenModal} />
         </li>
       )
