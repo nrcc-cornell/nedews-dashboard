@@ -14,7 +14,7 @@ export default class Links extends Component {
       showModal: false,
       linkInfo: ""
     }
-    this.linkKeys = ["usdm","ahps","nc-ahps","dmmaps","blends","usgs-sf","usgs-gw","negs_gw","nygs_gw","nhdes-gw","hprcc-acis","cmor","qdri","vdri","eddi","sport","grace","nldas","vic","cpc-sm","cpc-pdsi","cpc-topsoil",
+    this.linkKeys = ["usdm","ahps","nc-ahps","dmmaps","blends","usgs-wdfn","usgs-nwd","negs_gw","nygs_gw","nhdes-gw","hprcc-acis","cmor","qdri","vdri","eddi","sport","grace","nldas","cpc-sm","cpc-pdsi","cpc-topsoil",
     "cpc-hazards","ag-canada","ne-sweq","edd","nidis","nrccdu","dir","spei","nyc-resv","vtanr","me-wells","nh-wells","enso","cocorahs" ]
   }
   
